@@ -15,13 +15,14 @@ router.get("/success", async (req, res) => {
 
   try {
     if (insightsClient) {
+      /* 
       const hashedId = crypto
         .createHash("sha256")
         .update(req.session.tenantId + ":" + req.session.userPrincipalName)
         .digest("hex");
 
       insightsClient.setAuthenticatedUserContext(hashedId);
-
+      */
       insightsClient.trackEvent({
         name: "SuccessPageVisited",
         properties: { page: req.originalUrl },
