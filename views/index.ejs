@@ -3,10 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Access Package Builder helps you visualize Microsoft Entra ID governance using automation and intuitive tools." />
+    <meta
+      name="description"
+      content="Access Package Builder helps you visualize Microsoft Entra ID governance using automation and intuitive tools."
+    />
     <title>Access Package Builder</title>
     <link rel="stylesheet" href="/stylesheets/landing.css" />
-    <link rel="icon" href="/images/favicon.png" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
@@ -22,7 +29,7 @@
       <header class="header">
         <div class="header-content">
           <a href="https://accesspackagebuilder.dev" class="logo">
-              <img src="/images/apb-logo.png" alt="Access Package Builder Logo" />
+            <img src="/images/apb-logo.png" alt="Access Package Builder Logo" />
           </a>
           <div class="docs-login">
             <a href="/docs" class="docs-btn">Docs</a>
@@ -188,7 +195,7 @@
             <a href="/auth/login" class="try-btn demo-btn">Get Started</a>
           </div>
           <div class="demo-video">
-            <video controls autoplay loop muted playsinline>
+            <video controls loop muted playsinline preload="metadata">
               <source
                 src="/images/accesspackagebuilder-video.mp4"
                 type="video/mp4"
@@ -245,27 +252,48 @@
       });
     </script>
     <% if (insightsConnectionString) { %>
-      <script type="text/javascript">
-        var appInsights = window.appInsights || function (a) {
+    <script type="text/javascript">
+      var appInsights =
+        window.appInsights ||
+        (function (a) {
           function b(a) {
             c[a] = function () {
               var b = arguments;
-              c.queue.push(function () { c[a].apply(c, b) })
-            }
+              c.queue.push(function () {
+                c[a].apply(c, b);
+              });
+            };
           }
-          var c = { config: a }, d = document, e = window;
-          c.queue = [], c.version = "2.0";
-          for (var f = ["trackPageView", "trackEvent", "trackException", "trackTrace", "trackDependencyData", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"], g = 0; g < f.length; g++) b(f[g]);
+          var c = { config: a },
+            d = document,
+            e = window;
+          (c.queue = []), (c.version = "2.0");
+          for (
+            var f = [
+                "trackPageView",
+                "trackEvent",
+                "trackException",
+                "trackTrace",
+                "trackDependencyData",
+                "setAuthenticatedUserContext",
+                "clearAuthenticatedUserContext",
+                "flush",
+              ],
+              g = 0;
+            g < f.length;
+            g++
+          )
+            b(f[g]);
           var h = d.createElement("script");
           h.src = "https://js.monitor.azure.com/scripts/b/ai.2.min.js";
           d.getElementsByTagName("head")[0].appendChild(h);
           return c;
-        }({
-          connectionString: "<%= insightsConnectionString %>"
+        })({
+          connectionString: "<%= insightsConnectionString %>",
         });
-        window.appInsights = appInsights;
-        appInsights.trackPageView();
-      </script>
-      <% } %>      
+      window.appInsights = appInsights;
+      appInsights.trackPageView();
+    </script>
+    <% } %>
   </body>
 </html>

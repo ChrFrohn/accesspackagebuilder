@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { getUserInfo } = require("../auth"); // Import functions from core auth.js
 const insightsClient = require("../appInsightsClient");
-
+const crypto = require('crypto');
 
 // Route to handle the success page after login
 router.get('/success', async (req, res) => {
@@ -14,12 +14,19 @@ router.get('/success', async (req, res) => {
   const accessToken = req.session.token;
 
   try {
-    if (insightsClient) {
+    
+    if (insightsClient && req.session.tenantId && req.session.userPrincipalName) {
+      const hashedId = crypto
+        .createHash('sha256')
+        .update(req.session.tenantId + ':' + req.session.userPrincipalName)
+        .digest('hex');
+    
+      insightsClient.setAuthenticatedUserContext(hashedId);
       insightsClient.trackEvent({
         name: "SuccessPageVisited",
         properties: { page: req.originalUrl }
       });
-    }  
+    } 
     // Fetch user list using the access token
     const users = await getUserInfo(accessToken);
     const connectionString = process.env.APPLICATIONINSIGHTS_CONNECTION_STRING;

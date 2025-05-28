@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /auth/
+Disallow: /success/
+Disallow: /builder/
+Disallow: /deploy/
+Disallow: /buildermanual/
+Disallow: /nextSteps/
+
+Allow: /
+
+Sitemap: https://accesspackagebuilder.dev/sitemap.xml

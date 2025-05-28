@@ -55,6 +55,7 @@ Add the following to a `.env` file:
 ```env
 AZURE_CLIENT_ID=<your-client-id>
 AZURE_CLIENT_SECRET=<your-client-secret>
+NODE_ENV=development
 ```
 
 ### Running the Project  
