@@ -58,152 +58,119 @@
         </div>
       </header>
 
-      <!-- Title Section -->
-      <section class="hero-section" data-aos="fade-up">
-        <div class="hero-container">
-          <!-- Left: Title and Subtitle -->
-          <div class="hero-text">
-            <h1 class="big-title">
-              Access Package <span class="wobble">B</span>uilder
-            </h1>
-            <h2 class="subtitle">
-              Simplify your Microsoft Entra ID Identity Governance with my
-              intuitive Access Package Builder.
-            </h2>
-            <a href="/auth/login" class="try-btn">Try it Free</a>
-            <div class="tech-stack">
-              <div class="tech-item">
-                <i class="fa-brands fa-github"></i>
-                <p>Open Source</p>
-              </div>
-              <div class="tech-item">
-                <i class="fas fa-terminal"></i>
-                <p>PowerShell</p>
-              </div>
-              <div class="tech-item">
-                <i class="fa-brands fa-node-js"></i>
-                <p>Node.js</p>
-              </div>
-              <div class="tech-item">
-                <i class="fas fa-book"></i>
-                <p>Docsify</p>
-              </div>
-              <div class="tech-item">
-                <i class="fa-brands fa-square-js"></i>
-                <p>JavaScript</p>
-              </div>
-              <div class="tech-item">
-                <i class="fas fa-cloud"></i>
-                <p>Microsoft Cloud</p>
-              </div>
+      <!-- 1. READINESS SECTION (Intro/Start Button) -->
+      <section id="readiness-section">
+        <div class="readiness-container">
+          <div class="readiness-text">
+            <h1 class="readiness-title">Check Your Readiness</h1>
+            <p class="readiness-subtitle">
+              Ensure everything is in place before you dive in. Run a quick test
+              to see how ready you are to get started.
+            </p>
+            <button id="start-btn">Start Assessment</button>
+          </div>
+          <div class="readiness-image">
+            <img
+              src="/images/landingpicture.png"
+              alt="Readiness Illustration"
+            />
+          </div>
+          <p class="readiness-subtitle">
+            Ensure everything is in place before you dive in. Run a quick test
+            to see how ready you are to get started.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. ASSESSMENT SECTION (Initially Hidden) -->
+      <section id="assessment-section" style="display: none">
+        <div class="assessment-container">
+          <div class="header-container">
+            <h1 class="assessment-title">Readiness Check</h1>
+            <p id="total-progress" class="total-progress"></p>
+          </div>
+
+          <div class="progress-container">
+            <div id="progressbar"></div>
+            <div class="category-progress">
+              <p id="category-title" class="category-title"></p>
+              <span id="question-progress" class="question-progress"></span>
             </div>
           </div>
 
-          <!-- Right: Image or Animation -->
-          <div class="hero-image">
-            <img
-              src="/images/landingpicture.png"
-              alt="Access Package Builder Event"
-            />
+          <!-- QUESTIONS -->
+          <div id="question-section"></div>
+
+          <!-- NAVIGATION BUTTONS -->
+          <div class="navigation-buttons">
+            <button id="prev-btn" disabled>⬅ Previous</button>
+            <button id="next-btn" disabled>Next ➡</button>
           </div>
         </div>
       </section>
 
-      <!-- Features Section -->
-      <section class="features-section" data-aos="fade-up">
-        <h2 class="features-title">Features</h2>
-        <p class="features-subtitle">
-          Want to learn more? Check out the <a href="/docs">Docs.</a>
-        </p>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-users"></i></div>
-            <h3 class="feature-title">Simplified Access</h3>
-            <p class="feature-text">
-              Effortlessly visualize user group memberships.
+      <!-- 3. RESULT SECTION (Initially Hidden) -->
+      <section id="result-section" style="display: none">
+        <div class="result-container">
+          <!-- 1. Overall Readiness Score -->
+          <div class="score-section">
+            <h2>Overall Readiness Score</h2>
+            <p id="score-section-text">
+              Here’s a quick overview of your answers. You can review each
+              question in detail below.
             </p>
+            <div id="score-bar-container">
+              <div id="score-bar"></div>
+              <div id="score-label">0%</div>
+            </div>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-network-wired"></i></div>
-            <h3 class="feature-title">Dynamic Visuals</h3>
-            <p class="feature-text">
-              Explore maps of users, departments, and companies.
-            </p>
+          <!-- 2. Summary Charts -->
+          <div class="summary-charts">
+            <div id="radar-chart-container">
+              <h2>Summary Charts</h2>
+              <p id="radar-chart-text">
+                Here’s a quick overview of your answers. You can review each
+                question in detail below.
+              </p>
+              <canvas id="radar-chart"></canvas>
+            </div>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-robot"></i></div>
-            <h3 class="feature-title">Smart Suggestions</h3>
-            <p class="feature-text">
-              Get automated Access Package recommendations tailored to your
-              data.
-            </p>
-          </div>
+          <!-- Take Action Checklist -->
+          <div class="take-action-and-summary-flexcontainer">
+            <div class="take-action">
+              <h2>Take Action Recommendations</h2>
+              <p id="take-action-text">
+                Here’s a quick overview of your answers. You can review each
+                question in detail below.
+              </p>
+              <div id="action-checklist-wrapper">
+                <ul id="action-checklist"></ul>
+                <button id="toggle-action-btn" style="display: none">
+                  See More
+                </button>
+              </div>
+            </div>
 
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-search"></i></div>
-            <h3 class="feature-title">Clear Insights</h3>
-            <p class="feature-text">
-              Identify unassigned groups and optimize your governance.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-filter"></i></div>
-            <h3 class="feature-title">Custom Filters</h3>
-            <p class="feature-text">
-              Focus on specific departments, companies, or users easily.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-thumbs-up"></i></div>
-            <h3 class="feature-title">Data Quality</h3>
-            <p class="feature-text">
-              Identify gaps of not maintained user attributes.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-truck"></i></div>
-            <h3 class="feature-title">Deployment</h3>
-            <p class="feature-text">
-              Show a easy way to deploy your Access Package in Microsoft Entra
-              ID with PowerShell.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-link"></i></div>
-            <h3 class="feature-title">Seamless Integration</h3>
-            <p class="feature-text">
-              Built for a smooth Microsoft Entra ID Governance experience.
-            </p>
+            <!-- Summary of Answers -->
+            <div class="summary-answers">
+              <h2>Summary of Your Answers</h2>
+              <p id="summary-text">
+                Here’s a quick overview of your answers. You can review each
+                question in detail below.
+              </p>
+              <div id="answered-questions-wrapper" class="collapsed">
+                <div id="answered-questions-list"></div>
+              </div>
+              <button id="toggle-summary-btn">See More</button>
+            </div>
           </div>
         </div>
-      </section>
-      <!-- Walkthrough / Demo Section -->
-      <section class="demo-section" data-aos="fade-up">
-        <div class="demo-container">
-          <div class="demo-text">
-            <h2 class="demo-title">Walkthrough</h2>
-            <p class="demo-description">
-              Experience how easy it is to visualize your tailored Access
-              Packages with just a few clicks. Watch the quick walkthrough to
-              see the smart automation and clear insights in action.
-            </p>
-            <a href="/auth/login" class="try-btn demo-btn">Get Started</a>
-          </div>
-          <div class="demo-video">
-            <video controls loop muted playsinline preload="metadata">
-              <source
-                src="/images/accesspackagebuilder-video.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+        <div class="retake-test-container">
+          <button id="start-btn" onclick="document.location='readiness'">
+            Retake Test
+          </button>
         </div>
       </section>
 
@@ -232,6 +199,9 @@
         </div>
       </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/progressbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/javascripts/readiness.js" defer></script>
     <script
       data-name="BMC-Widget"
       data-cfasync="false"

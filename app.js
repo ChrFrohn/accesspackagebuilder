@@ -19,6 +19,7 @@ var builderRouter = require("./routes/builder");
 var nextStepsRouter = require("./routes/nextSteps");
 var deployRouter = require("./routes/deploy");
 var builderManualRouter = require("./routes/buildermanual");
+var readinessRouter = require("./routes/readiness");
 
 var app = express();
 
@@ -62,6 +63,7 @@ app.use("/builder", builderRouter);
 app.use("/nextSteps", nextStepsRouter);
 app.use("/deploy", deployRouter);
 app.use("/buildermanual", builderManualRouter);
+app.use("/readiness", readinessRouter);
 
 
 // catch 404 and forward to error handler

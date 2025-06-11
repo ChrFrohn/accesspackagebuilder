@@ -24,7 +24,8 @@
   <body>
     <div class="container">
       <!-- Sidebar -->
-      <%- include('partials/navbar') %> <!-- Include navbar partial -->
+      <%- include('partials/navbar') %>
+      <!-- Include navbar partial -->
       <!-- Main Content -->
       <main class="content">
         <header>
@@ -143,7 +144,10 @@
                 <% if (typeof users !== 'undefined' && users.length > 0) { %> <%
                 users.forEach(user => { %>
                 <tr>
-                  <td><%= user.accountEnabled ? "✔️" : "❌" %> <%= user.accountEnabled ? "Enabled" : "Disabled" %></td>
+                  <td>
+                    <%= user.accountEnabled ? "✔️" : "❌" %> <%=
+                    user.accountEnabled ? "Enabled" : "Disabled" %>
+                  </td>
                   <td><%= user.userType %></td>
                   <td><%= user.displayName %></td>
                   <td><%= user.jobTitle %></td>
