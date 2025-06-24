@@ -11,7 +11,7 @@ is set up.
 
 > 📸 Example Map View
 
-![Map View](http://localhost:3000/docs/images/accesspackagebuilder-map.png)
+![Map View](https://accesspackagebuilder.dev/docs/images/accesspackagebuilder-map.png)
 
 ## 🧬 Algorithm Process
 
@@ -51,7 +51,7 @@ their roles and affiliations within the company.
 
 > 📸 Suggestions from the Access Package Builder Algorithm based on your Data:
 
-![Algorithm Recommendations](http://localhost:3000/docs/images/accesspackagebuilder-algo.png)
+![Algorithm Recommendations](https://accesspackagebuilder.dev/docs/images/accesspackagebuilder-algo.png)
 
 With this visualization and intelligent suggestions, you are one
 step closer to improving access management and ensuring that

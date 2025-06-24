@@ -24,7 +24,7 @@ decide where to assign the group:
 
 > 📸 Per Drag and Drop create your Access Packages!
 
-![Access Package Builder Manual](http://localhost:3000/docs/images/accesspackagebuilder-manual.png)
+![Access Package Builder Manual](https://accesspackagebuilder.dev/docs/images/accesspackagebuilder-manual.png)
 
 ## 🔎 Group Membership Analyzer
 
@@ -54,7 +54,7 @@ members:
 
 > 📸 Unsure what's the Group Purpose? Have a look in the Analyzer you might find similar Users to decide which Access Package the Group should be assigend.
 
-![Group Membership Analyzer](http://localhost:3000/docs/images/groupmembershipanalyzer.png)
+![Group Membership Analyzer](https://accesspackagebuilder.dev/docs/images/groupmembershipanalyzer.png)
 
 This detailed information helps you decide where the group should be
 assigned whether it's to a Default Access Package, Company Access

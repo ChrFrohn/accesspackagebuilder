@@ -40,7 +40,7 @@ your company’s user data is in top shape.
 
 > 📸 Try to elimate every RED Column!
 
-![App Screenshot](http://localhost:3000/docs/images/userattributelist-bad.png)
+![App Screenshot](https://accesspackagebuilder.dev/docs/images/userattributelist-bad.png)
 
 The Access Package Builder will rely on this data to make detailed,
 algorithm-based suggestions about the appropriate access for each

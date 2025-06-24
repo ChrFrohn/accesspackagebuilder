@@ -67,33 +67,42 @@
           "text": "Microsoft Docs",
           "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-overview#license-requirements"
         },
-        "weight": 2,
+        "weight": 5,
         "answers": [
           {
-            "label": "✅ Yes",
+            "label": "Yes",
             "value": "yes",
             "weight": 4,
             "action": {
               "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals"
             }
           },
           {
-            "label": "📦 Evaluating",
+            "label": "Not for all users",
+            "value": "yes",
+            "weight": 3,
+            "action": {
+              "text": "Learn more about Access Packages",
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals"
+            }
+          },
+          {
+            "label": "Evaluating",
             "value": "evaluating",
             "weight": 2,
             "action": {
               "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals"
             }
           },
           {
-            "label": "❌ No",
+            "label": "No",
             "value": "no",
             "weight": 1,
             "action": {
               "text": "You need this License here:",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals"
             }
           }
         ]
@@ -104,35 +113,35 @@
         "explanation": "Shows organizational intent to adopt Access Packages.",
         "source": {
           "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-overview"
+          "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-create"
         },
         "weight": 2,
         "answers": [
           {
-            "label": "✅ Yes",
+            "label": "Yes",
             "value": "yes",
             "weight": 4,
             "action": {
               "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-create"
             }
           },
           {
-            "label": "🤔 Considering",
+            "label": "Considering",
             "value": "considering",
             "weight": 2,
             "action": {
               "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-create"
             }
           },
           {
-            "label": "❌ No",
+            "label": "No",
             "value": "no",
             "weight": 1,
             "action": {
               "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-create"
             }
           }
         ]
@@ -143,157 +152,139 @@
     "category": "Governance",
     "questions": [
       {
-        "id": "approval_flows_defined",
-        "question": "Approval flows defined?",
-        "explanation": "Approval routing is essential for access requests.",
+        "id": "synchronize_objects",
+        "question": "Do you synchronize objects (users or groups) from an AD environment to Entra ID?",
+        "explanation": "Authorization objects can be synchronized from an on-premise AD infrastructure to Entra ID in order to work with them in the cloud as well.",
         "source": {
           "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/id-governance/"
+          "url": "https://docs.azure.cn/en-us/entra/identity/hybrid/connect/whatis-azure-ad-connect"
         },
         "weight": 2,
         "answers": [
           {
-            "label": "✅ Yes",
-            "value": "yes",
+            "label": "Yes, I use Entra ID Connect Sync",
+            "value": "yes-connect-sync",
             "weight": 4,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Description of Entra ID Connect Sync with its requirements and limitations.",
+              "url": "https://docs.azure.cn/en-us/entra/identity/hybrid/connect/how-to-connect-sync-whatis"
             }
           },
           {
-            "label": "📄 Drafted",
-            "value": "drafted",
+            "label": "Yes, I use Entra ID Cloud Sync",
+            "value": "yes-cloud-sync",
             "weight": 2,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Description of Entra ID Cloud Sync with its requirements and limitations.",
+              "url": "https://learn.microsoft.com/en-us/entra/identity/hybrid/cloud-sync/what-is-cloud-sync"
             }
           },
           {
-            "label": "❌ No",
+            "label": "No",
             "value": "no",
             "weight": 1,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Learn more about How to connect your on-premises AD to Entra ID",
+              "url": "https://docs.azure.cn/en-us/entra/identity/hybrid/connect/whatis-azure-ad-connect"
             }
           }
         ]
       },
       {
-        "id": "review_processes_in_place",
-        "question": "Review process defined?",
-        "explanation": "Access Reviews ensure compliance over time.",
+        "id": "naming-convention",
+        "question": "Do you have a corresponding naming scheme for cloud groups?",
+        "explanation": "A standard for naming is important to make it easier and quicker to identify the type, service or application.",
         "source": {
           "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/id-governance/"
+          "url": "https://docs.azure.cn/en-us/entra/id-governance/entitlement-management-access-package-first"
         },
         "weight": 2,
         "answers": [
           {
-            "label": "✅ Yes",
+            "label": "Yes",
             "value": "yes",
             "weight": 4,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "",
+              "url": ""
             }
           },
           {
-            "label": "⚙️ Planned",
-            "value": "planned",
-            "weight": 2,
-            "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
-            }
-          },
-          {
-            "label": "❌ No",
+            "label": "No",
             "value": "no",
             "weight": 1,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "How do I create a naming convention for my cloud resources",
+              "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming"
             }
           }
         ]
       },
       {
-        "id": "policy_documented",
-        "question": "Policy documented?",
-        "explanation": "Clear access governance policies improve consistency.",
+        "id": "user-attributes",
+        "question": "Are user attributes maintained and are default values defined?",
+        "explanation": "The data quality of users and groups must be very high in order to be able to use the full scope of identity governance later on.",
         "source": {
           "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/id-governance/"
+          "url": "https://learn.microsoft.com/en-us/entra/external-id/customers/concept-user-attributes"
         },
-        "weight": 1,
+        "weight": 4,
         "answers": [
           {
-            "label": "✅ Yes",
+            "label": "Yes, all attributes like department, city, jobtitle, location, etc. are maintained",
             "value": "yes",
-            "weight": 3,
+            "weight": 4,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "",
+              "url": ""
             }
           },
           {
-            "label": "📄 Draft",
+            "label": "Yes, but only some attributes are maintained",
             "value": "draft",
             "weight": 2,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Learn more about the Concept of User Attributes",
+              "url": "https://learn.microsoft.com/en-us/entra/external-id/customers/concept-user-attributes"
             }
           },
           {
-            "label": "❌ No",
+            "label": "No, not at all",
             "value": "no",
             "weight": 1,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Learn more about the Concept of User Attributes",
+              "url": "https://learn.microsoft.com/en-us/entra/external-id/customers/concept-user-attributes"
             }
           }
         ]
       },
       {
-        "id": "compliance_requirements_known",
-        "question": "Compliance needs known?",
-        "explanation": "Important for tailoring governance strategy.",
+        "id": "access-groups-management",
+        "question": "Is it defined who can create access groups and how they are managed? (Group Lifecycle Management, Group Owners, etc.)",
+        "explanation": "To ensure security, scalability and transparency, roles need to be responsible for this.",
         "source": {
           "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/id-governance/"
+          "url": "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/custom-overview"
         },
-        "weight": 2,
+        "weight": 3,
         "answers": [
           {
-            "label": "✅ Yes",
+            "label": "Yes, Role based Access Control is used to manage access groups",
             "value": "yes",
             "weight": 4,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "",
+              "url": ""
             }
           },
           {
-            "label": "🤷 Unclear",
+            "label": "Unclear",
             "value": "unclear",
-            "weight": 2,
-            "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
-            }
-          },
-          {
-            "label": "❌ No",
-            "value": "no",
             "weight": 1,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Learn more about role-based access control in Microsoft Entra ID",
+              "url": "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/custom-overview"
             }
           }
         ]
@@ -304,118 +295,109 @@
     "category": "Identity Management",
     "questions": [
       {
-        "id": "lifecycle_managed",
-        "question": "User lifecycle managed?",
-        "explanation": "Access should align with join/move/leave status.",
+        "id": "idenentities_provisioned",
+        "question": "How are your identities provisioned in the IAM (Entra ID) system?",
+        "explanation": "Where the identities come from and their quality is crucial. This can save an enormous amount of manual work.",
         "source": {
           "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/id-governance/"
+          "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
         },
-        "weight": 3,
+        "weight": 4,
         "answers": [
           {
-            "label": "✅ Yes",
+            "label": "Automated via Cloud HR System",
             "value": "yes",
             "weight": 4,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "",
+              "url": ""
             }
           },
           {
-            "label": "📃 Documented",
+            "label": "Automated via On-Premise HR System",
             "value": "documented",
-            "weight": 2,
+            "weight": 4,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "",
+              "url": ""
             }
           },
           {
-            "label": "❌ No",
-            "value": "no",
+            "label": "Manually",
+            "value": "manually",
             "weight": 1,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Learn more about automated provisioning",
+              "url": "https://learn.microsoft.com/en-us/entra/identity/app-provisioning/plan-cloud-hr-provision"
             }
           }
         ]
       },
       {
-        "id": "user_types_defined",
-        "question": "User types defined?",
-        "explanation": "Different rules may apply to external/internal users.",
+        "id": "jml-process_defined",
+        "question": "Is a Joiner-Mover-Leaver (JML) process defined?",
+        "explanation": "A defined JML process is crucial for managing user lifecycle events effectively.",
         "source": {
           "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/id-governance/"
+          "url": "https://learn.microsoft.com/en-us/entra/id-governance/understanding-lifecycle-workflows"
         },
         "weight": 2,
         "answers": [
           {
-            "label": "✅ Yes",
+            "label": "Yes, fully defined and documented",
             "value": "yes",
             "weight": 4,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "",
+              "url": ""
             }
           },
           {
-            "label": "🌀 Partially",
+            "label": "Partially, need improvements",
             "value": "partial",
             "weight": 2,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Learn more about Lifecycle Workflows and there templates",
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/lifecycle-workflow-templates"
             }
           },
           {
-            "label": "❌ No",
+            "label": "No, everything is manual and different",
             "value": "no",
             "weight": 1,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Learn more about Lifecycle Workflows and there templates",
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/lifecycle-workflow-templates"
             }
           }
         ]
       },
       {
-        "id": "hr_sync_implemented",
-        "question": "HR sync in place?",
-        "explanation": "Keeps identity state in sync with HR systems.",
+        "id": "guest-identities_managed",
+        "question": "Are user identities such as Guest also managed accordingly and monitored using a workflow?",
+        "explanation": "Guests who are invited to projects or long-term partners also often have certain authorizations in the target tenant.",
         "source": {
           "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/id-governance/"
+          "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-manage-lifecycle"
         },
         "weight": 2,
         "answers": [
           {
-            "label": "✅ Yes",
+            "label": "Yes",
             "value": "yes",
             "weight": 4,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "",
+              "url": ""
             }
           },
           {
-            "label": "🔄 Planned",
-            "value": "planned",
-            "weight": 2,
-            "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
-            }
-          },
-          {
-            "label": "❌ No",
+            "label": "No",
             "value": "no",
             "weight": 1,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Learn more about Guets User Lifecycle Management",
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-manage-lifecycle"
             }
           }
         ]
@@ -427,117 +409,108 @@
     "questions": [
       {
         "id": "security_groups_used",
-        "question": "Security groups used?",
-        "explanation": "Required for group-based access via packages.",
+        "question": "Are authorizations/access checked after a while and adjusted if necessary?",
+        "explanation": "Trust is good but control is better, check your authorizations regularly.",
         "source": {
           "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/id-governance/"
+          "url": "https://learn.microsoft.com/en-us/entra/id-governance/deploy-access-reviews"
         },
         "weight": 2,
         "answers": [
           {
-            "label": "✅ Yes",
+            "label": "Yes, Access Reviews are used",
             "value": "yes",
             "weight": 4,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "",
+              "url": ""
             }
           },
           {
-            "label": "⚠️ Some",
+            "label": "Some, but manually or not regularly",
             "value": "some",
             "weight": 2,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Learn more about Access Reviews Deployment",
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/deploy-access-reviews"
             }
           },
           {
-            "label": "❌ No",
+            "label": "No regular checks",
             "value": "no",
             "weight": 1,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Learn more about Access Reviews Deployment",
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/deploy-access-reviews"
             }
           }
         ]
       },
       {
         "id": "dynamic_groups_configured",
-        "question": "Dynamic groups used?",
+        "question": "Do you use Dynamic groups? (for assigning group membership access automatically)",
         "explanation": "Enables automatic access assignment by rules.",
         "source": {
           "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/id-governance/"
+          "url": "https://learn.microsoft.com/en-us/entra/fundamentals/concept-learn-about-groups?toc=%2Fentra%2Fidentity%2Fusers%2Ftoc.json&bc=%2Fentra%2Fidentity%2Fusers%2Fbreadcrumb%2Ftoc.json"
         },
         "weight": 3,
         "answers": [
           {
-            "label": "✅ Yes",
+            "label": "Yes, they are governed and monitored",
             "value": "yes",
             "weight": 4,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "",
+              "url": ""
             }
           },
           {
-            "label": "🔧 Testing",
-            "value": "testing",
-            "weight": 2,
-            "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
-            }
-          },
-          {
-            "label": "❌ No",
+            "label": "No, I manually assign users to groups",
             "value": "no",
             "weight": 1,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Learn more about Dynamic Groups",
+              "url": "https://learn.microsoft.com/en-us/entra/identity/users/manage-dynamic-group"
             }
           }
         ]
       },
       {
         "id": "group_owner_assigned",
-        "question": "Group owners assigned?",
+        "question": "Are group owners and responsibilities for authorization groups clearly defined and documented?",
         "explanation": "Helps decentralize access decisions.",
         "source": {
           "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/id-governance/"
+          "url": "https://learn.microsoft.com/en-us/entra/fundamentals/concept-learn-about-groups"
         },
         "weight": 2,
         "answers": [
           {
-            "label": "✅ Yes",
+            "label": "Yes",
             "value": "yes",
             "weight": 4,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "",
+              "url": ""
             }
           },
           {
-            "label": "🧑‍💼 Some",
+            "label": "Some",
             "value": "some",
             "weight": 2,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Learn more about Concept of Cloud Groups",
+              "url": "https://learn.microsoft.com/en-us/entra/fundamentals/concept-learn-about-groups"
             }
           },
           {
-            "label": "❌ None",
+            "label": "None",
             "value": "none",
             "weight": 1,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Learn more about Concept of Cloud Groups",
+              "url": "https://learn.microsoft.com/en-us/entra/fundamentals/concept-learn-about-groups"
             }
           }
         ]
@@ -549,117 +522,108 @@
     "questions": [
       {
         "id": "roles_defined",
-        "question": "Business roles defined?",
-        "explanation": "Well-defined roles enable Access Package reuse.",
+        "question": "Have you defined all the necessary ROLES in the company to be able to implement Access Packages?",
+        "explanation": "Well-defined roles enable Access Package reuse. (Identity Governance Administrator, Access Package Manager, Catalog Owner, etc.)",
         "source": {
           "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/id-governance/"
+          "url": "https://docs.azure.cn/en-us/entra/id-governance/entitlement-management-delegate"
         },
         "weight": 3,
         "answers": [
           {
-            "label": "✅ Yes",
+            "label": "Yes, all important roles are defined",
             "value": "yes",
             "weight": 4,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "",
+              "url": ""
             }
           },
           {
-            "label": "🔄 In Progress",
-            "value": "progress",
+            "label": "Some, but not all roles are defined",
+            "value": "some",
             "weight": 2,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Learn more about Delegation and roles in entitlement management",
+              "url": "https://docs.azure.cn/en-us/entra/id-governance/entitlement-management-delegate"
             }
           },
           {
-            "label": "❌ No",
+            "label": "No",
             "value": "no",
             "weight": 1,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Learn more about Delegation and roles in entitlement management",
+              "url": "https://docs.azure.cn/en-us/entra/id-governance/entitlement-management-delegate"
             }
           }
         ]
       },
       {
-        "id": "naming_convention_set",
-        "question": "Naming convention used?",
-        "explanation": "Consistent naming helps long-term manageability.",
+        "id": "organizational_structure_ready",
+        "question": "Are their ORGANIZATIONAL STRUCTURES known and set, such as all departments (business units / service units) and locations?",
+        "explanation": "The Access Packages are strongly linked to the company structure, which is why this must be defined in advance.",
         "source": {
           "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/id-governance/"
+          "url": "https://docs.azure.cn/en-us/entra/id-governance/entitlement-management-delegate"
         },
-        "weight": 2,
+        "weight": 5,
         "answers": [
           {
-            "label": "✅ Yes",
+            "label": "Yes",
             "value": "yes",
             "weight": 4,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "",
+              "url": ""
             }
           },
           {
-            "label": "📄 Documented",
-            "value": "documented",
-            "weight": 2,
-            "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
-            }
-          },
-          {
-            "label": "❌ No",
+            "label": "No, we have things but not documented",
             "value": "no",
             "weight": 1,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Learn more about Orgnizational Structures",
+              "url": "https://docs.azure.cn/en-us/entra/id-governance/entitlement-management-delegate"
             }
           }
         ]
       },
       {
-        "id": "ownership_model_ready",
-        "question": "Ownership model defined?",
-        "explanation": "Key to delegating control over access packages.",
+        "id": "compliance_monitoring",
+        "question": "Do you know about your compliance and who is responsible for REVIEWING it?",
+        "explanation": "There must be processes or people who have identity governance in their area of responsibility and who develop and monitor this.",
         "source": {
           "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/id-governance/"
+          "url": "https://docs.azure.cn/en-us/entra/id-governance/governance-custom-alerts"
         },
-        "weight": 2,
+        "weight": 3,
         "answers": [
           {
-            "label": "✅ Yes",
+            "label": "Yes, Shared Responsibility Model is defined",
             "value": "yes",
             "weight": 4,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "",
+              "url": ""
             }
           },
           {
-            "label": "🧭 In Progress",
-            "value": "in_progress",
+            "label": "Partially, not monitored",
+            "value": "partially",
             "weight": 2,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Learn more about Custom Alerts",
+              "url": "https://docs.azure.cn/en-us/entra/id-governance/governance-custom-alerts"
             }
           },
           {
-            "label": "❌ No",
+            "label": "No",
             "value": "no",
             "weight": 1,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+              "text": "Learn more about Custom Alerts",
+              "url": "https://docs.azure.cn/en-us/entra/id-governance/governance-custom-alerts"
             }
           }
         ]
