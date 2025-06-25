@@ -313,7 +313,7 @@ function renderAnswerSummary() {
   const allItems = [];
 
   surveyData.forEach((cat) => {
-    const catTitle = document.createElement("h4");
+    const catTitle = document.createElement("h3");
     catTitle.textContent = cat.category;
     allItems.push(catTitle);
 
@@ -371,6 +371,7 @@ function renderActionChecklist() {
         matchedAnswer.action
       ) {
         actionItems.push({
+          category: cat.category,
           question: q.question,
           userAnswer: matchedAnswer.label,
           suggestion: matchedAnswer.action,
@@ -393,6 +394,7 @@ function renderActionChecklist() {
   firstTwo.forEach((item) => {
     const li = document.createElement("li");
     li.innerHTML = `
+      <strong style="color:#ef4444">${item.category}</strong><br>
       <strong>Q:</strong> ${item.question}<br>
       <strong>Your Answer:</strong> ${item.userAnswer}<br>
       <strong>Recommendation:</strong> <a href="${item.suggestion.url}" target="_blank">${item.suggestion.text}</a>
@@ -400,6 +402,7 @@ function renderActionChecklist() {
     checklist.appendChild(li);
   });
 
+  
   // Render remaining (hidden by default)
   const hiddenContainer = document.createElement("div");
   hiddenContainer.id = "more-actions";
@@ -408,6 +411,7 @@ function renderActionChecklist() {
   remaining.forEach((item) => {
     const li = document.createElement("li");
     li.innerHTML = `
+      <strong style="color:#ef4444">${item.category}</strong><br>
       <strong>Q:</strong> ${item.question}<br>
       <strong>Your Answer:</strong> ${item.userAnswer}<br>
       <strong>Recommendation:</strong> <a href="${item.suggestion.url}" target="_blank">${item.suggestion.text}</a>

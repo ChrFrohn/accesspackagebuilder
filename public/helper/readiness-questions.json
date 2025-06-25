@@ -4,8 +4,8 @@
     "questions": [
       {
         "id": "governance_features",
-        "question": "Which Microsoft Entra Identity Governance features would you like to use in your environment?",
-        "explanation": "You can use Microsoft Entra ID Governance to automatically ensure that the right people have the right access to the right resources.",
+        "question": "Do you know what an Access Package in Entra ID is?",
+        "explanation": "An Access Package is a feature in Microsoft Entra ID Governance that allows users to request a predefined set of resources — like groups, Teams, SharePoint sites, or apps — all at once. It simplifies access management, especially for onboarding, project access, or external users, by automating approvals, expirations, and reviews.",
         "source": {
           "text": "Microsoft Docs",
           "url": "https://learn.microsoft.com/en-us/entra/id-governance/"
@@ -13,87 +13,12 @@
         "weight": 3,
         "answers": [
           {
-            "label": "Access Packages",
-            "value": "access-packages",
-            "weight": 5,
-            "action": {
-              "text": "",
-              "url": ""
-            }
-          },
-          {
-            "label": "Access Reviews",
-            "value": "access-reviews",
-            "weight": 1,
-            "action": {
-              "text": "What are access reviews?",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/access-reviews-overview"
-            }
-          },
-          {
-            "label": "Lifecycle Workflows",
-            "value": "lifecycle-workflows",
-            "weight": 1,
-            "action": {
-              "text": "What are lifecycle workflows?",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/what-are-lifecycle-workflows"
-            }
-          },
-          {
-            "label": "Priviledge Identity Management",
-            "value": "priviledge-identity-management",
-            "weight": 1,
-            "action": {
-              "text": "What is Microsoft Entra Privileged Identity Management?",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/privileged-identity-management/pim-configure"
-            }
-          },
-          {
-            "label": "All of them",
-            "value": "all-of-them",
-            "weight": 1,
-            "action": {
-              "text": "What is Microsoft Entra ID Governance?",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
-            }
-          }
-        ]
-      },
-      {
-        "id": "licensing_available",
-        "question": "Do you have Entra ID P2 or Entra ID Govennacne Licenses available?",
-        "explanation": "Microsoft Entra ID P2 licenses are required.",
-        "source": {
-          "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-overview#license-requirements"
-        },
-        "weight": 5,
-        "answers": [
-          {
             "label": "Yes",
             "value": "yes",
             "weight": 4,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals"
-            }
-          },
-          {
-            "label": "Not for all users",
-            "value": "yes",
-            "weight": 3,
-            "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals"
-            }
-          },
-          {
-            "label": "Evaluating",
-            "value": "evaluating",
-            "weight": 2,
-            "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals"
+              "text": "",
+              "url": ""
             }
           },
           {
@@ -101,7 +26,73 @@
             "value": "no",
             "weight": 1,
             "action": {
-              "text": "You need this License here:",
+              "text": "Learn about Access Packages",
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-overview"
+            }
+          }
+        ]
+      },
+      {
+        "id": "licensing_available",
+        "question": "What license does your organization currently use for Microsoft Entra?",
+        "explanation": "Access Packages are part of Microsoft Entra ID Governance, which requires the P2 license. Knowing your current license level is essential to determine what features (like access reviews, dynamic assignment, or lifecycle policies) you can use.",
+        "source": {
+          "text": "Microsoft Docs",
+          "url": "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals"
+        },
+        "weight": 5,
+        "answers": [
+          {
+            "label": "Microsoft Entra ID Governance",
+            "value": "governance",
+            "weight": 6,
+            "action": {
+              "text": "",
+              "url": ""
+            }
+          },
+          {
+            "label": "Microsoft Entra ID P2",
+            "value": "p2",
+            "weight": 6,
+            "action": {
+              "text": "",
+              "url": ""
+            }
+          },
+          {
+            "label": "Microsoft Entra Suite",
+            "value": "suite",
+            "weight": 6,
+            "action": {
+              "text": "",
+              "url": ""
+            }
+          },
+          {
+            "label": "Microsoft Entra ID Governance Step Up for Microsoft Entra ID Px",
+            "value": "step-up",
+            "weight": 6,
+            "action": {
+              "text": "",
+              "url": ""
+            }
+          },
+          {
+            "label": "Microsoft Entra ID P1",
+            "value": "p1",
+            "weight": 1,
+            "action": {
+              "text": "Microsoft Entra ID Governance licensing fundamentals",
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals"
+            }
+          },
+          {
+            "label": "Free",
+            "value": "free",
+            "weight": 1,
+            "action": {
+              "text": "Microsoft Entra ID Governance licensing fundamentals",
               "url": "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals"
             }
           }
@@ -109,39 +100,48 @@
       },
       {
         "id": "access_package_plan",
-        "question": "Plan to use Access Packages?",
-        "explanation": "Shows organizational intent to adopt Access Packages.",
+        "question": "For which use cases in your company are Access Packages planned?",
+        "explanation": "Access Packages can be used for a wide range of scenarios: onboarding employees or external users, project-based access, temporary access for contractors, or self-service group access. Understanding your use cases will help design your Access Packages more effectively.",
         "source": {
           "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-create"
+          "url": "https://learn.microsoft.com/en-us/entra/id-governance/scenarios/identity-governance-use-cases"
         },
         "weight": 2,
         "answers": [
           {
-            "label": "Yes",
-            "value": "yes",
+            "label": "Internal employee",
+            "value": "internal",
             "weight": 4,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-create"
+              "text": "",
+              "url": ""
             }
           },
           {
-            "label": "Considering",
-            "value": "considering",
-            "weight": 2,
-            "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-create"
-            }
-          },
-          {
-            "label": "No",
-            "value": "no",
+            "label": "External guests (Partners)",
+            "value": "external",
             "weight": 1,
             "action": {
-              "text": "Learn more about Access Packages",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-create"
+              "text": "Microsoft Entra ID Governance use cases",
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/scenarios/govern-the-employee-lifecycle"
+            }
+          },
+          {
+            "label": "Applications",
+            "value": "appllications",
+            "weight": 1,
+            "action": {
+              "text": "Microsoft Entra ID Governance use cases",
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-applications-prepare"
+            }
+          },
+          {
+            "label": "All of scenarios",
+            "value": "all",
+            "weight": 1,
+            "action": {
+              "text": "Microsoft Entra ID Governance use cases",
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/scenarios/identity-governance-use-cases"
             }
           }
         ]
@@ -152,48 +152,48 @@
     "category": "Governance",
     "questions": [
       {
-        "id": "synchronize_objects",
-        "question": "Do you synchronize objects (users or groups) from an AD environment to Entra ID?",
-        "explanation": "Authorization objects can be synchronized from an on-premise AD infrastructure to Entra ID in order to work with them in the cloud as well.",
+        "id": "soa-identities",
+        "question": "What is the authoritative source of truth for your user identities? (i.e., the system from which other directories or apps are synchronized)",
+        "explanation": "The authoritative source of truth is the primary system where user identities are created and managed — often an HR tool or directory like Active Directory. Knowing this helps determine how identities are provisioned and synced into Microsoft Entra ID and ensures that access governance starts from a reliable source.",
         "source": {
           "text": "Microsoft Docs",
-          "url": "https://docs.azure.cn/en-us/entra/identity/hybrid/connect/whatis-azure-ad-connect"
+          "url": "https://learn.microsoft.com/en-us/entra/fundamentals/identity-fundamental-concepts"
         },
         "weight": 2,
         "answers": [
           {
-            "label": "Yes, I use Entra ID Connect Sync",
-            "value": "yes-connect-sync",
-            "weight": 4,
+            "label": "Entra ID (Cloud Only)",
+            "value": "entra-id",
+            "weight": 3,
             "action": {
-              "text": "Description of Entra ID Connect Sync with its requirements and limitations.",
-              "url": "https://docs.azure.cn/en-us/entra/identity/hybrid/connect/how-to-connect-sync-whatis"
+              "text": "",
+              "url": ""
             }
           },
           {
-            "label": "Yes, I use Entra ID Cloud Sync",
-            "value": "yes-cloud-sync",
+            "label": "HR Solution (Cloud HR Tool, e.g., Workday, SAP SuccessFactors)",
+            "value": "hr-solution",
             "weight": 2,
             "action": {
-              "text": "Description of Entra ID Cloud Sync with its requirements and limitations.",
-              "url": "https://learn.microsoft.com/en-us/entra/identity/hybrid/cloud-sync/what-is-cloud-sync"
+              "text": "What is HR-driven provisioning?",
+              "url": "https://learn.microsoft.com/en-us/entra/identity/app-provisioning/what-is-hr-driven-provisioning"
             }
           },
           {
-            "label": "No",
-            "value": "no",
+            "label": "Active Directory (On-Premises)",
+            "value": "active-directory",
             "weight": 1,
             "action": {
-              "text": "Learn more about How to connect your on-premises AD to Entra ID",
-              "url": "https://docs.azure.cn/en-us/entra/identity/hybrid/connect/whatis-azure-ad-connect"
+              "text": "What is app provisioning in Microsoft Entra ID?",
+              "url": "https://learn.microsoft.com/en-us/entra/identity/app-provisioning/user-provisioning"
             }
           }
         ]
       },
       {
         "id": "naming-convention",
-        "question": "Do you have a corresponding naming scheme for cloud groups?",
-        "explanation": "A standard for naming is important to make it easier and quicker to identify the type, service or application.",
+        "question": "Do you have a consistent naming convention in place for your cloud-based groups (e.g., [Dept]-[App]-[AccessLevel])?",
+        "explanation": "Naming conventions help standardize group names, making it easier to find and assign the correct groups when configuring Access Packages. A clear naming strategy also improves manageability and reduces errors in access assignment.",
         "source": {
           "text": "Microsoft Docs",
           "url": "https://docs.azure.cn/en-us/entra/id-governance/entitlement-management-access-package-first"
@@ -214,24 +214,24 @@
             "value": "no",
             "weight": 1,
             "action": {
-              "text": "How do I create a naming convention for my cloud resources",
-              "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming"
+              "text": "Enforce a naming policy on Microsoft 365 groups in Microsoft Entra ID",
+              "url": "https://learn.microsoft.com/en-us/entra/identity/users/groups-naming-policy"
             }
           }
         ]
       },
       {
         "id": "user-attributes",
-        "question": "Are user attributes maintained and are default values defined?",
-        "explanation": "The data quality of users and groups must be very high in order to be able to use the full scope of identity governance later on.",
+        "question": "Is the quality of your user data (e.g., department, location, manager) high enough to support automated access decisions?",
+        "explanation": "Access Packages can use dynamic rules or policies based on user attributes like department, job title, or location. If these values are missing or inaccurate, automated access assignments will be unreliable.",
         "source": {
           "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/external-id/customers/concept-user-attributes"
+          "url": "https://learn.microsoft.com/en-us/entra/external-id/customers/concept-user-attributes#built-in-user-attributes"
         },
         "weight": 4,
         "answers": [
           {
-            "label": "Yes, all attributes like department, city, jobtitle, location, etc. are maintained",
+            "label": "Yes – Most key attributes are accurate and consistently filled",
             "value": "yes",
             "weight": 4,
             "action": {
@@ -240,51 +240,21 @@
             }
           },
           {
-            "label": "Yes, but only some attributes are maintained",
-            "value": "draft",
+            "label": "Partially – Some attributes are incomplete or outdated",
+            "value": "partially",
             "weight": 2,
             "action": {
-              "text": "Learn more about the Concept of User Attributes",
-              "url": "https://learn.microsoft.com/en-us/entra/external-id/customers/concept-user-attributes"
+              "text": "Built-in user attributes",
+              "url": "https://learn.microsoft.com/en-us/entra/external-id/customers/concept-user-attributes#built-in-user-attributes"
             }
           },
           {
-            "label": "No, not at all",
+            "label": "No – Data quality is poor or manually maintained",
             "value": "no",
             "weight": 1,
             "action": {
-              "text": "Learn more about the Concept of User Attributes",
-              "url": "https://learn.microsoft.com/en-us/entra/external-id/customers/concept-user-attributes"
-            }
-          }
-        ]
-      },
-      {
-        "id": "access-groups-management",
-        "question": "Is it defined who can create access groups and how they are managed? (Group Lifecycle Management, Group Owners, etc.)",
-        "explanation": "To ensure security, scalability and transparency, roles need to be responsible for this.",
-        "source": {
-          "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/custom-overview"
-        },
-        "weight": 3,
-        "answers": [
-          {
-            "label": "Yes, Role based Access Control is used to manage access groups",
-            "value": "yes",
-            "weight": 4,
-            "action": {
-              "text": "",
-              "url": ""
-            }
-          },
-          {
-            "label": "Unclear",
-            "value": "unclear",
-            "weight": 1,
-            "action": {
-              "text": "Learn more about role-based access control in Microsoft Entra ID",
-              "url": "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/custom-overview"
+              "text": "Built-in user attributes",
+              "url": "https://learn.microsoft.com/en-us/entra/external-id/customers/concept-user-attributes#built-in-user-attributes"
             }
           }
         ]
@@ -296,8 +266,8 @@
     "questions": [
       {
         "id": "idenentities_provisioned",
-        "question": "How are your identities provisioned in the IAM (Entra ID) system?",
-        "explanation": "Where the identities come from and their quality is crucial. This can save an enormous amount of manual work.",
+        "question": "How are user identities created in your environment?",
+        "explanation": "Understanding how user accounts are created helps assess how scalable, consistent, and secure your identity management process is. Automated identity creation (e.g., through HR-driven provisioning or AD sync) reduces errors and supports reliable access lifecycle management.",
         "source": {
           "text": "Microsoft Docs",
           "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
@@ -305,38 +275,38 @@
         "weight": 4,
         "answers": [
           {
-            "label": "Automated via Cloud HR System",
+            "label": "Automatically via sync (e.g., HR system, Entra Connect)",
             "value": "yes",
-            "weight": 4,
+            "weight": 1,
             "action": {
-              "text": "",
-              "url": ""
+              "text": "How to create, invite, and delete users",
+              "url": "https://learn.microsoft.com/en-us/entra/fundamentals/how-to-create-delete-users?toc=%2Fentra%2Fidentity%2Fusers%2Ftoc.json&bc=%2Fentra%2Fidentity%2Fusers%2Fbreadcrumb%2Ftoc.json"
             }
           },
           {
-            "label": "Automated via On-Premise HR System",
-            "value": "documented",
-            "weight": 4,
-            "action": {
-              "text": "",
-              "url": ""
-            }
-          },
-          {
-            "label": "Manually",
+            "label": "Manually created in Entra ID",
             "value": "manually",
             "weight": 1,
             "action": {
-              "text": "Learn more about automated provisioning",
-              "url": "https://learn.microsoft.com/en-us/entra/identity/app-provisioning/plan-cloud-hr-provision"
+              "text": "Microsoft Entra Connect Sync: Understand and customize synchronization",
+              "url": "https://docs.azure.cn/en-us/entra/identity/hybrid/connect/how-to-connect-sync-whatis"
+            }
+          },
+          {
+            "label": "Both",
+            "value": "both",
+            "weight": 4,
+            "action": {
+              "text": "",
+              "url": ""
             }
           }
         ]
       },
       {
         "id": "jml-process_defined",
-        "question": "Is a Joiner-Mover-Leaver (JML) process defined?",
-        "explanation": "A defined JML process is crucial for managing user lifecycle events effectively.",
+        "question": "Do you have a defined process for managing the full user lifecycle (Joiner, Mover, Leaver)?",
+        "explanation": "The user lifecycle refers to managing identity and access when users join, change roles or departments, or leave the organization. Having a clear process ensures that users get access quickly when needed — and lose it promptly when they leave.",
         "source": {
           "text": "Microsoft Docs",
           "url": "https://learn.microsoft.com/en-us/entra/id-governance/understanding-lifecycle-workflows"
@@ -374,8 +344,8 @@
       },
       {
         "id": "guest-identities_managed",
-        "question": "Are user identities such as Guest also managed accordingly and monitored using a workflow?",
-        "explanation": "Guests who are invited to projects or long-term partners also often have certain authorizations in the target tenant.",
+        "question": "Do you support external identities (B2B guests) in your environment?",
+        "explanation": "Microsoft Entra supports B2B collaboration, allowing external partners or contractors to access resources securely through Access Packages. Supporting guests in a structured way is critical for secure collaboration.",
         "source": {
           "text": "Microsoft Docs",
           "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-manage-lifecycle"
@@ -383,12 +353,21 @@
         "weight": 2,
         "answers": [
           {
-            "label": "Yes",
+            "label": "Yes - using Microsoft Entra B2B",
             "value": "yes",
             "weight": 4,
             "action": {
               "text": "",
               "url": ""
+            }
+          },
+          {
+            "label": "Planning to",
+            "value": "planning",
+            "weight": 1,
+            "action": {
+              "text": "Learn more about Guets User Lifecycle Management",
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-manage-lifecycle"
             }
           },
           {
@@ -409,8 +388,8 @@
     "questions": [
       {
         "id": "security_groups_used",
-        "question": "Are authorizations/access checked after a while and adjusted if necessary?",
-        "explanation": "Trust is good but control is better, check your authorizations regularly.",
+        "question": "?????? Do you regularly review and adjust access rights (e.g., through access reviews or audits)?",
+        "explanation": "Regular access reviews help ensure users only retain access to what they truly need. This is a key requirement for both security and compliance. In Entra ID, you can schedule automated reviews to simplify this process.",
         "source": {
           "text": "Microsoft Docs",
           "url": "https://learn.microsoft.com/en-us/entra/id-governance/deploy-access-reviews"
@@ -418,7 +397,7 @@
         "weight": 2,
         "answers": [
           {
-            "label": "Yes, Access Reviews are used",
+            "label": "Yes – We have scheduled reviews",
             "value": "yes",
             "weight": 4,
             "action": {
@@ -427,29 +406,29 @@
             }
           },
           {
-            "label": "Some, but manually or not regularly",
-            "value": "some",
+            "label": "Partially – Some manual or ad-hoc reviews",
+            "value": "partially",
             "weight": 2,
             "action": {
-              "text": "Learn more about Access Reviews Deployment",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/deploy-access-reviews"
+              "text": "Create an access review of an access package in entitlement management",
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-reviews-create"
             }
           },
           {
-            "label": "No regular checks",
+            "label": "No – Access is rarely reviewed after assignment",
             "value": "no",
             "weight": 1,
             "action": {
-              "text": "Learn more about Access Reviews Deployment",
-              "url": "https://learn.microsoft.com/en-us/entra/id-governance/deploy-access-reviews"
+              "text": "Create an access review of an access package in entitlement management",
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-reviews-create"
             }
           }
         ]
       },
       {
         "id": "dynamic_groups_configured",
-        "question": "Do you use Dynamic groups? (for assigning group membership access automatically)",
-        "explanation": "Enables automatic access assignment by rules.",
+        "question": "Do you use dynamic groups or attribute-based rules to manage group membership?",
+        "explanation": "Dynamic groups use user attributes (like department, location, or job title) to automatically add or remove users. This enables scalable, accurate group membership — and improves automation when assigning Access Packages.",
         "source": {
           "text": "Microsoft Docs",
           "url": "https://learn.microsoft.com/en-us/entra/fundamentals/concept-learn-about-groups?toc=%2Fentra%2Fidentity%2Fusers%2Ftoc.json&bc=%2Fentra%2Fidentity%2Fusers%2Fbreadcrumb%2Ftoc.json"
@@ -477,17 +456,17 @@
         ]
       },
       {
-        "id": "group_owner_assigned",
-        "question": "Are group owners and responsibilities for authorization groups clearly defined and documented?",
+        "id": "timebound_access",
+        "question": "Access Packages allow you to define who approves access and how long access is valid. Requiring approvals ensures that only appropriate users gain access. Expiration dates help remove unnecessary access automatically.",
         "explanation": "Helps decentralize access decisions.",
         "source": {
           "text": "Microsoft Docs",
-          "url": "https://learn.microsoft.com/en-us/entra/fundamentals/concept-learn-about-groups"
+          "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-create"
         },
         "weight": 2,
         "answers": [
           {
-            "label": "Yes",
+            "label": "Yes – We use both approval workflows and time-limited access",
             "value": "yes",
             "weight": 4,
             "action": {
@@ -496,21 +475,21 @@
             }
           },
           {
-            "label": "Some",
+            "label": "Partially – We use either approvals or expiration, not both",
             "value": "some",
-            "weight": 2,
+            "weight": 1,
             "action": {
-              "text": "Learn more about Concept of Cloud Groups",
-              "url": "https://learn.microsoft.com/en-us/entra/fundamentals/concept-learn-about-groups"
+              "text": "Create an access package in entitlement management",
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-create"
             }
           },
           {
-            "label": "None",
+            "label": "No – Access is granted without approvals or time limits",
             "value": "none",
             "weight": 1,
             "action": {
-              "text": "Learn more about Concept of Cloud Groups",
-              "url": "https://learn.microsoft.com/en-us/entra/fundamentals/concept-learn-about-groups"
+              "text": "Create an access package in entitlement management",
+              "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-create"
             }
           }
         ]
@@ -523,7 +502,7 @@
       {
         "id": "roles_defined",
         "question": "Have you defined all the necessary ROLES in the company to be able to implement Access Packages?",
-        "explanation": "Well-defined roles enable Access Package reuse. (Identity Governance Administrator, Access Package Manager, Catalog Owner, etc.)",
+        "explanation": "To implement Access Packages effectively, it’s important that the necessary roles within your organization are clearly defined. This includes identifying who is responsible for approving access requests, managing the packages, maintaining group memberships, and conducting regular access reviews. Without this clarity, the access management process can become inconsistent, inefficient, or non-compliant.",
         "source": {
           "text": "Microsoft Docs",
           "url": "https://docs.azure.cn/en-us/entra/id-governance/entitlement-management-delegate"
@@ -531,7 +510,7 @@
         "weight": 3,
         "answers": [
           {
-            "label": "Yes, all important roles are defined",
+            "label": "Yes - all important roles are defined",
             "value": "yes",
             "weight": 4,
             "action": {
@@ -540,7 +519,7 @@
             }
           },
           {
-            "label": "Some, but not all roles are defined",
+            "label": "Some - but not all roles are defined",
             "value": "some",
             "weight": 2,
             "action": {
@@ -562,7 +541,7 @@
       {
         "id": "organizational_structure_ready",
         "question": "Are their ORGANIZATIONAL STRUCTURES known and set, such as all departments (business units / service units) and locations?",
-        "explanation": "The Access Packages are strongly linked to the company structure, which is why this must be defined in advance.",
+        "explanation": "To manage access effectively with Access Packages, it’s essential to have a clear understanding of your organizational structure — including departments, business units, service areas, and physical or regional locations. These structures are often used in dynamic group rules, attribute-based assignments, or policy scopes, so missing or unclear structure data can lead to incorrect access or manual overhead.",
         "source": {
           "text": "Microsoft Docs",
           "url": "https://docs.azure.cn/en-us/entra/id-governance/entitlement-management-delegate"
@@ -579,7 +558,7 @@
             }
           },
           {
-            "label": "No, we have things but not documented",
+            "label": "No - we have things but not documented",
             "value": "no",
             "weight": 1,
             "action": {
@@ -592,7 +571,7 @@
       {
         "id": "compliance_monitoring",
         "question": "Do you know about your compliance and who is responsible for REVIEWING it?",
-        "explanation": "There must be processes or people who have identity governance in their area of responsibility and who develop and monitor this.",
+        "explanation": "Understanding your organization's compliance requirements (such as ISO 27001, GDPR, SOX, etc.) is critical for identity and access governance. It’s equally important to know who is responsible for reviewing whether access controls and user permissions meet those standards. This ensures that access packages and entitlement management are aligned with both security policies and audit expectations.",
         "source": {
           "text": "Microsoft Docs",
           "url": "https://docs.azure.cn/en-us/entra/id-governance/governance-custom-alerts"
@@ -600,7 +579,7 @@
         "weight": 3,
         "answers": [
           {
-            "label": "Yes, Shared Responsibility Model is defined",
+            "label": "Yes - Shared Responsibility Model is defined",
             "value": "yes",
             "weight": 4,
             "action": {
@@ -609,7 +588,7 @@
             }
           },
           {
-            "label": "Partially, not monitored",
+            "label": "Partially - not monitored",
             "value": "partially",
             "weight": 2,
             "action": {
