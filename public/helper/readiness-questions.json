@@ -5,7 +5,7 @@
       {
         "id": "governance_features",
         "question": "Do you know what an Access Package in Entra ID is?",
-        "explanation": "An Access Package is a feature in Microsoft Entra ID Governance that allows users to request a predefined set of resources — like groups, Teams, SharePoint sites, or apps — all at once. It simplifies access management, especially for onboarding, project access, or external users, by automating approvals, expirations, and reviews.",
+        "explanation": "An Access Package is a feature in Microsoft Entra ID Governance that allows users to request a predefined set of resources like groups, Teams, SharePoint sites, or apps all at once. It simplifies access management, especially for onboarding, project access, or external users, by automating approvals, expirations, and reviews.",
         "source": {
           "text": "Microsoft Docs",
           "url": "https://learn.microsoft.com/en-us/entra/id-governance/"
@@ -154,7 +154,7 @@
       {
         "id": "soa-identities",
         "question": "What is the authoritative source of truth for your user identities? (i.e., the system from which other directories or apps are synchronized)",
-        "explanation": "The authoritative source of truth is the primary system where user identities are created and managed — often an HR tool or directory like Active Directory. Knowing this helps determine how identities are provisioned and synced into Microsoft Entra ID and ensures that access governance starts from a reliable source.",
+        "explanation": "The authoritative source of truth is the primary system where user identities are created and managed often an HR tool or directory like Active Directory. Knowing this helps determine how identities are provisioned and synced into Microsoft Entra ID and ensures that access governance starts from a reliable source.",
         "source": {
           "text": "Microsoft Docs",
           "url": "https://learn.microsoft.com/en-us/entra/fundamentals/identity-fundamental-concepts"
@@ -306,7 +306,7 @@
       {
         "id": "jml-process_defined",
         "question": "Do you have a defined process for managing the full user lifecycle (Joiner, Mover, Leaver)?",
-        "explanation": "The user lifecycle refers to managing identity and access when users join, change roles or departments, or leave the organization. Having a clear process ensures that users get access quickly when needed — and lose it promptly when they leave.",
+        "explanation": "The user lifecycle refers to managing identity and access when users join, change roles or departments, or leave the organization. Having a clear process ensures that users get access quickly when needed and lose it promptly when they leave.",
         "source": {
           "text": "Microsoft Docs",
           "url": "https://learn.microsoft.com/en-us/entra/id-governance/understanding-lifecycle-workflows"
@@ -314,7 +314,7 @@
         "weight": 2,
         "answers": [
           {
-            "label": "Yes, fully defined and documented",
+            "label": "Yes - fully defined and documented",
             "value": "yes",
             "weight": 4,
             "action": {
@@ -323,7 +323,7 @@
             }
           },
           {
-            "label": "Partially, need improvements",
+            "label": "Partially - need improvements",
             "value": "partial",
             "weight": 2,
             "action": {
@@ -332,7 +332,7 @@
             }
           },
           {
-            "label": "No, everything is manual and different",
+            "label": "No - everything is manual and different",
             "value": "no",
             "weight": 1,
             "action": {
@@ -428,7 +428,7 @@
       {
         "id": "dynamic_groups_configured",
         "question": "Do you use dynamic groups or attribute-based rules to manage group membership?",
-        "explanation": "Dynamic groups use user attributes (like department, location, or job title) to automatically add or remove users. This enables scalable, accurate group membership — and improves automation when assigning Access Packages.",
+        "explanation": "Dynamic groups use user attributes (like department, location, or job title) to automatically add or remove users. This enables scalable, accurate group membership and improves automation when assigning Access Packages.",
         "source": {
           "text": "Microsoft Docs",
           "url": "https://learn.microsoft.com/en-us/entra/fundamentals/concept-learn-about-groups?toc=%2Fentra%2Fidentity%2Fusers%2Ftoc.json&bc=%2Fentra%2Fidentity%2Fusers%2Fbreadcrumb%2Ftoc.json"
@@ -436,7 +436,7 @@
         "weight": 3,
         "answers": [
           {
-            "label": "Yes, they are governed and monitored",
+            "label": "Yes - they are governed and monitored",
             "value": "yes",
             "weight": 4,
             "action": {
@@ -445,7 +445,7 @@
             }
           },
           {
-            "label": "No, I manually assign users to groups",
+            "label": "No - I manually assign users to groups",
             "value": "no",
             "weight": 1,
             "action": {
@@ -457,8 +457,8 @@
       },
       {
         "id": "timebound_access",
-        "question": "Access Packages allow you to define who approves access and how long access is valid. Requiring approvals ensures that only appropriate users gain access. Expiration dates help remove unnecessary access automatically.",
-        "explanation": "Helps decentralize access decisions.",
+        "question": "Do you require approvals and set expiration dates when users request access to resources (e.g., via Access Packages)?",
+        "explanation": "Access Packages allow you to define who approves access and how long access is valid. Requiring approvals ensures that only appropriate users gain access. Expiration dates help remove unnecessary access automatically.",
         "source": {
           "text": "Microsoft Docs",
           "url": "https://learn.microsoft.com/en-us/entra/id-governance/entitlement-management-access-package-create"
@@ -541,7 +541,7 @@
       {
         "id": "organizational_structure_ready",
         "question": "Are their ORGANIZATIONAL STRUCTURES known and set, such as all departments (business units / service units) and locations?",
-        "explanation": "To manage access effectively with Access Packages, it’s essential to have a clear understanding of your organizational structure — including departments, business units, service areas, and physical or regional locations. These structures are often used in dynamic group rules, attribute-based assignments, or policy scopes, so missing or unclear structure data can lead to incorrect access or manual overhead.",
+        "explanation": "To manage access effectively with Access Packages, it’s essential to have a clear understanding of your organizational structure including departments, business units, service areas, and physical or regional locations. These structures are often used in dynamic group rules, attribute-based assignments, or policy scopes, so missing or unclear structure data can lead to incorrect access or manual overhead.",
         "source": {
           "text": "Microsoft Docs",
           "url": "https://docs.azure.cn/en-us/entra/id-governance/entitlement-management-delegate"
