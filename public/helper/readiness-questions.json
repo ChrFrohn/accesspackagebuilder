@@ -388,7 +388,7 @@
     "questions": [
       {
         "id": "security_groups_used",
-        "question": "?????? Do you regularly review and adjust access rights (e.g., through access reviews or audits)?",
+        "question": "Do you regularly review and adjust access rights (e.g., through access reviews or audits)?",
         "explanation": "Regular access reviews help ensure users only retain access to what they truly need. This is a key requirement for both security and compliance. In Entra ID, you can schedule automated reviews to simplify this process.",
         "source": {
           "text": "Microsoft Docs",
